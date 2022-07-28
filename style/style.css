@@ -1,0 +1,389 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+/* HEADER */
+ header {
+    background-color:white;
+    padding: 20px;
+    width: 100%;
+}
+.corchea {
+    width: 26px;
+    height: 26px;
+}
+.header_logo {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.index_header-link {
+    width: 100%;
+}
+.index_header-link ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.index_header-link ul li {
+    font-size: 19px;
+}   
+/* main-index */
+main {
+    background-color: black;
+}
+.main_section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../medios/Tienda\ de\ musica.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgba(255, 255, 255, 0.538);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.index_main-h1{
+    display: flex;
+    justify-content: center;
+    color:white ;
+    padding: 10px;
+}
+.grid_container {
+    display: grid;
+    padding-bottom: 40px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    gap: 3px;
+} 
+.grid-item {
+    position: relative;
+
+}
+.grid-item div {
+    position: absolute;
+    bottom: 50%;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    background-color:rgba(0,0, 0, 0.5);
+}
+.grid-item div a {
+    text-align: center;
+    color: white;
+    bottom: 50%;
+    font-size: 25px;
+}
+.gridImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* FOOTER */
+footer {
+    padding: 16px;
+    background-color: #212F3D;
+}
+.redes {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 1s ease-in;
+}
+.redes:hover {
+    background-color: #212F3D;
+    transform: scale(1,1);
+}
+.redes__sociales {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+footer div ul li i {
+    font-size: 25px;
+}
+footer div ul li i:hover {
+   color: white;
+}
+.social__media--whatsapp {
+    display: none;
+}
+.footer_section {
+    text-align: center;
+}
+.footer_section a {
+    color: white;
+}
+.footer_section p {
+    padding-bottom: 5px;
+    color: white;
+}
+@media screen and (min-width:630px){
+    .grid_MapContainer{
+        grid-template-columns: 1000px;
+    }
+    .index_header-link ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+@media screen and (min-width:670px){
+.grid_container {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 240px;
+    grid-template-areas:
+    "violin violin"
+    "guitarra piano"
+    "bateria flauta"
+     ;
+    gap: 5px;
+}
+.violin {
+    grid-area: violin;
+}
+.guitarra {
+    grid-area: guitarra;
+}
+.piano {
+    grid-area: piano;
+}
+.bateria {
+grid-area:bateria;
+}
+.flauta {
+grid-area:flauta;
+}
+}
+@media screen and (min-width:930px){
+    .grid_container {
+        grid-template-columns: 1fr 1.5fr 1.5fr ;
+        grid-auto-rows: 300px;
+        grid-template-areas:
+        "violin guitarra piano"
+        "violin bateria flauta"
+         ;
+}
+}
+@media screen and (min-width:1270px){
+   /*  header {
+        position: fixed;
+        background-color:rgba(255, 255, 255, 0.457);
+    } */
+    .index_header-link ul li:hover {
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 5px;
+    }
+    .grid_container {
+        grid-auto-rows: 400px;
+    }
+    .social__media--whatsapp {
+        display: flex;
+        position: fixed;
+        bottom: 130px;
+        right: 30px;
+    }
+    .fa-whatsapp {
+        font-size: 35px;
+        color: white;
+    }
+    .grid-item div{
+        background-color:rgba(0,0, 0, 0.0);
+        transition: all 0.8s ease-in;
+    }
+    .grid-item div:hover {
+        background-color:rgba(0,0, 0, 0.5);
+    }
+    .contac_mainContainer .contac-grid_container {
+        padding: 40px 300px 40px 300px ;
+        background-color: rgba(53, 52, 52, 0.418); 
+    }
+}
+/* main-contac */
+.contac_mainContainer {
+    min-height: 79.6vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;   
+}
+label {
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+}
+.labelNombre{
+    margin-top: 0;
+}
+input{
+    padding: 2px;
+    border-radius: 5px;
+}
+#email {
+    margin-bottom: 10px;
+}
+.contac_mainContainer .contac-grid_container {
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contac_section-buttonContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    padding-top: 10px;
+   
+}
+textarea {
+    border-radius: 5px;
+}
+button{
+    padding: 4px;
+    /* border-radius: 5px; */
+}
+/* instrument-main */
+.flex-conatainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.flex_title {
+    color: white;
+    margin: 10px;
+    text-align: center;
+}
+.section_div-flex {
+    border: 4px white solid;
+    width: 310px;
+    height: 365px ;
+    background-color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+.flex_container-text {
+    text-align: center;
+}
+.guitar {
+    width: 310px;
+    height: 300px;
+}
+.flex_piano {
+    width: 310px;
+    height: 300px;
+}
+.flex-bateria {
+    width: 310px;
+    height: 300px;
+}
+.flex-bass {
+    width: 310px ;
+    height: 300px;
+}
+/* main-login*/
+.login_legend {
+    color: white;
+    font-size: 19px;
+}
+
+/* main_pay */
+.contac_PayMainContainer {
+    min-height: 79.6vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;   
+}
+.contac-grid_container {
+    padding: 40px 150px 40px 200px ;
+    background-color: rgba(53, 52, 52, 0.418); 
+}
+.Pay_gridH1 {
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.pay_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Pay_gridP {
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.Pay_gridH4 {
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.SectionFlex_pay {
+    /* margin: 0 30px 0 30px ; */
+    flex-grow: 50%; 
+}
+.Flex_pay {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* MAIN-LOATION */
+.grid_MapContainer {
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 800px;
+    grid-template-rows:400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Map_grid {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.location_h1 {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+@media screen and (max-width:819px) {
+    .grid_MapContainer{
+        grid-template-columns: 600px;
+        grid-template-rows: 400px;
+    }
+}
+@media screen and (max-width:613px) {
+    .grid_MapContainer {
+        grid-template-columns: 400px;
+        grid-template-rows: 300px;
+    }
+}
+@media screen and (max-width:419px){
+    .grid_MapContainer {
+        grid-template-columns: 300px;
+        grid-template-rows: 200px;
+    }
+}
