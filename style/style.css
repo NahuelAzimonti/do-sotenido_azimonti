@@ -315,10 +315,10 @@ button{
     justify-content: center;
     align-items: center;   
 }
-.contac-grid_container {
+/* .contac-grid_container {
     padding: 40px 150px 40px 200px ;
     background-color: rgba(53, 52, 52, 0.418); 
-}
+} */
 .Pay_gridH1 {
     color: white;
     text-align: center;
